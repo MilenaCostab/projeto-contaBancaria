@@ -42,6 +42,7 @@ O projeto simula operações reais de um banco, incluindo diferentes tipos de co
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd ProjetoBanco
 2.Restaure as dependências e execute a aplicação
+```bash
   dotnet restore
   dotnet run
 
