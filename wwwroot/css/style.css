@@ -1,0 +1,12 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+header { text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; margin-bottom: 20px; }
+main { max-width: 800px; margin: 0 auto; display: grid; gap: 20px; }
+section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+h2 { margin-top: 0; color: #3498db; }
+input, select, button { padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; display: block; width: 100%; box-sizing: border-box; }
+button { background: #3498db; color: white; border: none; cursor: pointer; transition: 0.3s; font-weight: bold; }
+button:hover { background: #2980b9; }
+.conta-card { border-left: 5px solid #3498db; background: #f9f9f9; padding: 10px; margin-bottom: 10px; border-radius: 4px; }
+.op-group { display: flex; gap: 10px; flex-wrap: wrap; }
+.op-group input { flex: 1; }
+.op-group button { width: auto; flex: 1; }

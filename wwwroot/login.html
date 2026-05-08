@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuBanco - Login</title>
+    <link rel="stylesheet" href="css/transactions.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <button id="themeToggle" class="btn-theme">🌓</button>
+            <h1>MEUBANCO</h1>
+            <h2>Acesse sua conta</h2>
+        </header>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <button type="button" id="adminLoginBtn" style="background: #0066cc; margin-top: 10px;">Entrar como ADM</button>
+        </form>
+
+        <div class="links">
+            <a href="#" id="forgotPassword">Esqueci minha senha</a>
+            <span class="separator">|</span>
+            <a href="#" id="openAccount">Abrir nova conta</a>
+        </div>
+
+        <div id="notificacao" class="hidden"></div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuBanco - Transações</title>
+    <link rel="stylesheet" href="css/transactions.css">
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto;">
+            <h1>MEUBANCO</h1>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button id="themeToggle" class="btn-theme" title="Alternar Tema">🌓</button>
+                <button onclick="logout()" class="btn-logout" style="display: inline-block;">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="lista"> 
+            <h2 id="pageHeading">Dados do Usuário</h2>
+            <div id="contasContainer">
+            </div>
+        </section>
+
+        <section id="operacoes">
+            <h2>Operações Rápidas</h2>
+            <div class="op-group">
+                <input type="number" id="opNumero" placeholder="Nº da Conta">
+                <input type="number" id="opValor" placeholder="Valor" step="0.01">
+                <button onclick="realizarSaque()">Sacar</button>
+                <button onclick="realizarDeposito()">Depositar</button>
+            </div>
+        </section>
+
+        <section id="transferencia">
+            <h2>Transferência</h2>
+            <div class="op-group">
+                <input type="number" id="transfOrigem" placeholder="Nº da Conta Origem">
+                <input type="number" id="transfDestino" placeholder="Nº da Conta Destino">
+                <input type="number" id="transfValor" placeholder="Valor" step="0.01">
+                <button onclick="realizarTransferencia()" style="background: #0066cc;">Transferir</button>
+            </div>
+        </section>
+
+        <section id="caixinha">
+            <h2>Minha Caixinha</h2>
+            <div class="op-group">
+                <input type="number" id="caixinhaNumero" placeholder="Nº da Conta">
+                <input type="number" id="caixinhaValor" placeholder="Valor" step="0.01">
+                <button onclick="depositarNaCaixinha()" style="background: #0066cc;">Guardar na Caixinha</button>
+                <button onclick="retirarDaCaixinha()" style="background: #0066cc;">Resgatar da Caixinha</button>
+                <button id="btnRender" onclick="aplicarRendimento()" style="background: #0066cc; display: none;">Atualizar Rendimento</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="notificacao" class="hidden"></div>
+
+    <script src="js/transactions.js"></script>
+</body>
+</html>

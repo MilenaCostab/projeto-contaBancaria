@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeuBanco</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>MEUBANCO</h1>
+    </header>
+
+    <main>
+        <section id="cadastro">
+            <h2>Nova Conta</h2>
+            <form id="formCadastro">
+                <input type="text" id="titular" placeholder="Nome do Titular" required>
+                <input type="number" id="numero" placeholder="Número da Conta" required>
+                <input type="number" id="agencia" placeholder="Agência" required>
+                <input type="number" id="saldo" placeholder="Saldo Inicial" step="0.01" required>
+                <select id="tipo">
+                    <option value="corrente">Conta Corrente</option>
+                    <option value="poupanca">Conta Poupança</option>
+                </select>
+                <div id="camposExtras">
+                    <input type="number" id="limite" placeholder="Limite" step="0.01">
+                </div>
+                <button type="submit">Cadastrar Conta</button>
+            </form>
+        </section>
+
+        <section id="lista">
+            <h2>Dados do usuário</h2>
+            <div id="contasContainer">
+            </div>
+        </section>
+
+        <section id="operacoes">
+            <h2>Operações Rápidas</h2>
+            <div class="op-group">
+                <input type="number" id="opNumero" placeholder="Nº da Conta">
+                <input type="number" id="opValor" placeholder="Valor" step="0.01">
+                <button onclick="realizarSaque()">Sacar</button>
+                <button onclick="realizarDeposito()">Depositar</button>
+                <button onclick="aplicarRendimento()">Render</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="notificacao" class="hidden"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
